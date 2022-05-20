@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/style.css@latest/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body onload="getCaptcha()">
+
+    <body>
+        <!-- Here a loader is created which 
+             loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status" id="loading">
+                <span class="sr-only"><h3>To generate captcha click on below button</h3></span>
+                <br>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <label>Captcha Code</label>
+            <input type="text" name="chkCaptcha" size="30" maxlength="6" value="" id="chkCaptcha" autocomplete="off" placeholder="Captcha..." />
+            <button onclick="validateCaptcha()">Validate</button>
+            <div id="message"></div>
+            <div id='captcha' align="middle" width="130px" height="40px"></div>
+            <input type="image" src="/images/Button_Refresh.png" alt="refresh" height="30px" width="30px" style="border-radius: 5px" title="refresh" align="middle" border="0" onclick="getCaptcha()" />
+        </div>
+    </body>
+    <style>
+        #message {
+            text-align: start;
+            font-size: 20px;
+            margin-left: 9%;
+        }
+    </style>
+
+</html>
